@@ -8,3 +8,7 @@ The first contract is `MessageEnvelope`, which carries a stable message type
 and schema version, message identity, correlation and causation identities,
 and a JSON payload. Broker delivery, retries, and worker execution belong to
 their respective integrations.
+
+The `MessageBus` capability is qualified through Core. `InMemoryMessageBus`
+provides a bounded process-local queue for tests and development; a full queue
+returns the original envelope so the publisher can retry or apply policy.

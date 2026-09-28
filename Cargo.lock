@@ -33,9 +33,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "rustclamp-core"
+version = "0.1.0"
+
+[[package]]
 name = "rustclamp-messaging"
 version = "0.1.0"
 dependencies = [
+ "rustclamp-core",
  "serde",
  "serde_json",
 ]
