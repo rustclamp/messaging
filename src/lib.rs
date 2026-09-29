@@ -29,6 +29,9 @@ pub struct MessageEnvelope {
     pub correlation_id: String,
     /// Identity of the message that directly caused this message, if any.
     pub causation_id: Option<String>,
+    /// Optional Unix timestamp in milliseconds after which work must not start.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub deadline_unix_ms: Option<u64>,
     /// Versioned application data; transport metadata belongs to the transport.
     pub payload: Value,
 }
