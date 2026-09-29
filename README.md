@@ -12,3 +12,10 @@ delivery, retries, and worker execution belong to their respective integrations.
 The `MessageBus` capability is qualified through Core. `InMemoryMessageBus`
 provides a bounded process-local queue for tests and development; a full queue
 returns the original envelope so the publisher can retry or apply policy.
+
+## License
+
+Licensed under either of [Apache License, Version 2.0](LICENSE-APACHE) or
+[MIT license](LICENSE-MIT) at your option. Unless you state otherwise, any
+contribution you submit for inclusion is dual licensed as above, without
+additional terms or conditions.
