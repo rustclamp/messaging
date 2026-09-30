@@ -13,6 +13,11 @@ The `MessageBus` capability is qualified through Core. `InMemoryMessageBus`
 provides a bounded process-local queue for tests and development; a full queue
 returns the original envelope so the publisher can retry or apply policy.
 
+`TopicBus` adds topics: `subscribe(topic)` returns a `Subscription` with an
+awaitable `recv`, and `publish_to(topic, message)` fans out a copy to every
+live subscriber. A full subscriber queue rejects the publish for all of them.
+`MessageEnvelope::new` and `caused_by` generate ids and carry lineage.
+
 ## License
 
 Licensed under either of [Apache License, Version 2.0](LICENSE-APACHE) or

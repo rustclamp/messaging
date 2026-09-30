@@ -1,0 +1,1 @@
+std::pin::Pin<std::boxed::Box<dyn std::future::Future<Output = std::result::Result<(), PublishError>> + std::marker::Send>>
