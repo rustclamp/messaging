@@ -6,8 +6,11 @@ rust-version = "1.96.1"
 description = "Versioned message envelope contracts for RustClamp applications."
 repository = "https://github.com/rustclamp/messaging"
 license = "MIT OR Apache-2.0"
+homepage = "https://rustclamp.com"
+documentation = "https://docs.rs/rustclamp-messaging"
+keywords = ["framework", "messaging", "envelope", "outbox"]
+categories = ["asynchronous"]
 readme = "README.md"
-publish = false
 
 [dependencies]
 rustclamp-core = { version = "0.1.0", path = "../core" }

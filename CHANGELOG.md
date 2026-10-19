@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### Changed
+
+- Ready for crates.io: `publish = false` is gone and the manifest carries
+  homepage, documentation, keywords and categories. Nothing is uploaded until
+  rustclamp's `tools/publish.py --execute` runs.
+
 - Add `TopicBus`: topic-addressed fan-out with per-subscriber bounded queues and an awaitable `Subscription::recv` (#2).
 - Add `MessageEnvelope::new` / `caused_by`, which generate ids and carry correlation lineage (#2).
 - Carry an optional execution deadline in the message envelope.
